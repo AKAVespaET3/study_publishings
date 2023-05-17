@@ -1,0 +1,29 @@
+.title{
+    color: rgb(83, 90, 66);
+    background-color: rgb(8, 8, 8);
+    text-align: center; 
+   
+}
+
+.verse {
+    color: tan;
+}
+
+.chorus { 
+    color:rgb(7, 155, 63);
+    font-size: 12px;
+}
+
+.bridge {
+    color: cadetblue;
+}
+
+body{
+    background-color: darkslategrey;
+}
+.text_effect{
+    font-weight: 900;
+    font-size: 20px;
+    color : coral;
+    text-shadow: 5px 5px 5px black;
+}
