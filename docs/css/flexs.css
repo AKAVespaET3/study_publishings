@@ -2,7 +2,8 @@
     display: flex;
     /* flex-wrap: nowrap; */
     background-color: DodgerBlue;
-    flex-direction: row-reverse;
+    justify-content: space-between;
+    flex-direction: row;
 }
 
 .flex-container_1 {
