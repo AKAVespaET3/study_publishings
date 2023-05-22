@@ -9,76 +9,96 @@
     <title>Forms</title>
 </head>
 <body>
-    <div>
-        <form action="../index.html">
-            CheckOut Form
-            <div>
-                First name <input type="text" name="firstname">
-            </div>
-            <div>
-                Last name <input type="text" name="lastname">  
-            </div>
-            <div>
-                Username <input type="text" name="username">
-            </div>
-            <div>
-                Email(Optional) <input type="email" name="email" value="you@example.com">
-            </div>      
-            <div>
-                Address <input type="text" name="adderss" value="1234 Main St">
-            </div>
-            <div>
-                Address 2 <input type="text" name="address2" value="Apartment or suite">
-            </div>
-            <div>
-                <label for="country">Country </label>
-                    <select name="country" id="country">
-                        <option value="korea" selected>Korea</option>
-                        <option value="japan">japan</option>
-                        <option value="usa">usa</option>
-                    </select>
-            </div>
-            <div>
-                <label for="state">State </label>
-                    <select name="state" id="state">
-                        <option value="gyeonggi-do">Gyeonggi-do</option>
-                        <option value="gwangju">Gwangju</option>
-                        <option value="pusan">Pusan</option>
-                    </select>
-            </div>
-            <div>
-                Zip: <input type="text" name="zip" value="12345">
-            </div>        
-        <hr>
-            <p><input type="checkbox" name="shippingaddressisthesame" id=""> Shipping address is the same as my billing address</p>
-            <p><input type="checkbox" name="savethisinformation" id=""> Save this information for next time</p>
-        <hr>            
-            <div>
-                <h4>Payment</h4>
-                Credit card<input type="radio" name="payment" value="creditcard" id=""><br>
-                Debit card<input type="radio" name="payment" value="debitcard" id=""><br>
-                Paypal<input type="radio" name="payment" value="paypal" id="">
-            </div>
-            <div>
-                Name on Card: <input type="text" name="nameoncard" value="John Doe">
-            </div>
-            <div>
-                Credit Card Number:<br>
-                <input type="text" name="creditcardnumber">   
-            </div>
-            <div>
-                Expiration Date: <input type="date" name="expirationdate" value="2023-05-16" >
-            </div>
-            <div>
-                CVV: <input type="text" name="cvv">
-            </div>
-        <hr>
-            <div>
-                <button type="submit">Countiue to Checkout</button>
-            </div>               
-     
-        </form>
+    <div class="container">
+        <div class="fs-3 text-center ">
+            <img class="mt-4 mb-4" src="../images/vespa.png" alt="로고">
+            <p class="lead">
+                Checkout form
+Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.
+            </p>
+            
+        </div>
+        
+        <form action="../bootstraps/toy_publishings.html">
+            <h4 class="mb-4">CheckOut Form</h4>
+            <div class="row">
+                <div class="col-sm-6">
+                    <label for="firstname" class="form-label">First name</label>
+                    <input class="form-control" type="text" id="firstname" name="firstname">
+                </div>
+                <div class="col-sm-6">
+                    <label for="lastName" class="form-label">last name</label>
+                    <input class="form-control" type="text" id="lastname" name="lastname">
+                </div>
+                <div class="col-12">
+                    <label for="username" class="form-label">username</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+                </div>
+                <div>
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="username" name="email" placeholder="you@example.com">
+                </div>      
+                <div>
+                    <label for="address" class="form-label">Address</label>
+                    <input type="text"  class="form-control" name="adderss" placeholder="1234 Main St">
+                </div>
+               <div>
+                    <label for="address_2" class="form-label">Address2</label>
+                    <input type="text"  class="form-control" name="adderss_2" placeholder="APT or SUIT">
+                </div>
+                <div class="col-md-5">
+                    <label for="country" class="form-label">Country </label>
+                        <select class="form-select" name="country" id="country">
+                            <option value="korea" selected>Korea</option>
+                            <option value="japan">japan</option>
+                            <option value="usa">usa</option>
+                        </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="state" class="form-label">State </label>
+                        <select class="form-select" name="state" id="state">
+                            <option value="gyeonggi-do">Gyeonggi-do</option>
+                            <option value="gwangju">Gwangju</option>
+                            <option value="pusan">Pusan</option>
+                        </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="zip" class="form-label">zip </label>
+                    <input type="text" class="form-control" name="zip" placeholder="12345">
+                </div>        
+            <hr>
+                <p><input type="checkbox" name="shippingaddressisthesame" id=""> Shipping address is the same as my billing address</p>
+                <p><input type="checkbox" name="savethisinformation" id=""> Save this information for next time</p>
+            <hr>            
+                <div>
+                    <h4>Payment</h4>
+                    Credit card<input type="radio" name="payment" value="creditcard" id=""><br>
+                    Debit card<input type="radio" name="payment" value="debitcard" id=""><br>
+                    Paypal<input type="radio" name="payment" value="paypal" id="">
+                </div>
+                <div>
+                    Name on Card: <input type="text" name="nameoncard" value="John Doe">
+                </div>
+                <div>
+                    Credit Card Number:<br>
+                    <input type="text" name="creditcardnumber">   
+                </div>
+                <div>
+                    Expiration Date: <input type="date" name="expirationdate" value="2023-05-16" >
+                </div>
+                <div>
+                    CVV: <input type="text" name="cvv">
+                </div>
+            <hr>
+                <div>
+                    <button type="submit">Countiue to Checkout</button>
+                </div>               
+                </div>
+            </form>
+
     </div>
+        
+   
     
     
         
