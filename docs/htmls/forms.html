@@ -49,7 +49,8 @@ Below is an example form built entirely with Bootstrap’s form controls. Each r
                 <div class="col-md-5">
                     <label for="country" class="form-label">Country </label>
                         <select class="form-select" name="country" id="country">
-                            <option value="korea" selected>Korea</option>
+                            <option value="" selected>-----</option>
+                            <option value="korea" >Korea</option>
                             <option value="japan">japan</option>
                             <option value="usa">usa</option>
                         </select>
@@ -57,41 +58,62 @@ Below is an example form built entirely with Bootstrap’s form controls. Each r
                 <div class="col-md-4">
                     <label for="state" class="form-label">State </label>
                         <select class="form-select" name="state" id="state">
+                            <option value="" selected>------</option>
                             <option value="gyeonggi-do">Gyeonggi-do</option>
                             <option value="gwangju">Gwangju</option>
                             <option value="pusan">Pusan</option>
                         </select>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 mb-4">
                     <label for="zip" class="form-label">zip </label>
                     <input type="text" class="form-control" name="zip" placeholder="12345">
                 </div>        
             <hr>
-                <p><input type="checkbox" name="shippingaddressisthesame" id=""> Shipping address is the same as my billing address</p>
-                <p><input type="checkbox" name="savethisinformation" id=""> Save this information for next time</p>
+                <div class="form-check">
+                    <label for="shipping" class="form-check-label"></label>
+                    <input class="form-check-input" type="checkbox" name="shipping" id="shipping"> Shipping address is the same as my billing address
+                </div>
+                <div class="form-check">
+                    <label for="savethis" class="form-check-label"></label>
+                    <input class="form-check-input" type="checkbox" name="savethisinformation" id="savethis"> Save this information for next time
+                </div>
             <hr>            
                 <div>
-                    <h4>Payment</h4>
-                    Credit card<input type="radio" name="payment" value="creditcard" id=""><br>
-                    Debit card<input type="radio" name="payment" value="debitcard" id=""><br>
-                    Paypal<input type="radio" name="payment" value="paypal" id="">
+                    <h4 class="my-3">Payment</h4>
+                <div class="my-3">
+                    <div class="form-check">
+                        <input type="radio" name="payment" id="creditcard" class="form-check-input" value="creditcard">
+                        <label for="creditcard" class="form-check-label">Credit card</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="payment" id="debitcard" class="form-check-input" value="debitcard">
+                        <label for="debitcard" class="form-check-label">Debit card</label>   
+                    </div> 
+                    <div class="form-check">
+                        <input type="radio" name="payment" id="paypal" class="form-check-input" value="paypal">
+                        <label for="paypal" class="form-check-label">Paypal</label>   
+                    </div>
                 </div>
-                <div>
-                    Name on Card: <input type="text" name="nameoncard" value="John Doe">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="nameoncard" class="form-label">Name on Card</label>
+                        <input type="text" name="nameoncard" id="nameoncard" class="form-control">
+                        <small class="text-muted">Full name as displayed on card</small>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="creditcardnumber" class="form-label">Credit Card Number</label>
+                        <input type="text" name="creditcardnumber" id="creditcardnumber" class="form-control">
+                    </div>
                 </div>
-                <div>
-                    Credit Card Number:<br>
-                    <input type="text" name="creditcardnumber">   
+                <div class="my-3">
+                    Expiration Date: <input type="date" name="expirationdate" value="" >
                 </div>
-                <div>
-                    Expiration Date: <input type="date" name="expirationdate" value="2023-05-16" >
-                </div>
-                <div>
+                <div class="my-3">
                     CVV: <input type="text" name="cvv">
                 </div>
             <hr>
                 <div>
-                    <button type="submit">Countiue to Checkout</button>
+                    <button class="my-3" type="submit">Countiue to Checkout</button>
                 </div>               
                 </div>
             </form>
